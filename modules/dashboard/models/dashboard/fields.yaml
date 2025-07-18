@@ -1,0 +1,21 @@
+fields:
+    name:
+        label: Dashboard Name
+        type: text
+        span: auto
+
+    code:
+        label: Code
+        type: text
+        span: auto
+        preset: name
+
+    icon:
+        label: icon
+        type: dropdown
+        optionsPreset: icons@phosphor
+
+    is_global:
+        label: Global Access
+        comment: Dashboards with Global Access enabled can be viewed by any user, but this doesn't grant editing permissions.
+        type: checkbox

@@ -1,0 +1,31 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+tabs:
+    fields:
+
+        _traffic_stats_hint:
+            comment: dashboard::lang.internal_traffic_statistics.hint
+            type: hint
+            tab: Traffic Statistics
+
+        traffic_stats_enabled:
+            label: Internal Traffic Statistics
+            comment: Internal Traffic Statistics logs pageviews, IP addresses, and other basic anonymous user data into the database and provides reports for the dashboard. When the feature is disabled, the data is not written to the database.
+            tab: Traffic Statistics
+            type: switch
+
+        traffic_stats_timezone:
+            label: Timezone
+            type: dropdown
+            comment: Timezone to log pageviews in. Changing the timezone won't update the existing data. If you change the timezone without erasing the existing data, reports can potentially display incorrect times for previously logged days.
+            tab: Traffic Statistics
+            span: auto
+
+        traffic_stats_retention:
+            label: Retention Period (Months)
+            comment: Determines the duration for which traffic statistics data should be stored in the database. When the set period expires, the corresponding data is automatically purged from the database. Set to 0 or empty to retain records forever.
+            tab: Traffic Statistics
+            type: number
+            span: auto
